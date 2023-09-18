@@ -11,6 +11,8 @@ export const GET = async (req, { params }) => {
       data: { views: { increment: 1 } },
       include: { user: true },
     });
+i
+    if (!post) throw new Error("post not found");
 
     return new NextResponse(JSON.stringify(post, { status: 200 }));
   } catch (err) {
